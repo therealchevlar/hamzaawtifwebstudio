@@ -1,88 +1,565 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hamza Atif Web Studio — conversion-focused websites that make your business impossible to ignore." />
-  <title>Hamza Atif — Web Studio</title>
+  <meta name="description" content="Hamza Atif Web Studio — Conversion-focused websites that make your business impossible to ignore." />
+  <meta name="keywords" content="web design, web development, landing pages, business websites, e-commerce, portfolio websites" />
+  <meta name="author" content="Hamza Atif" />
+  <meta property="og:title" content="Hamza Atif — Web Studio" />
+  <meta property="og:description" content="Premium websites that turn visitors into clients." />
+  <meta property="og:type" content="website" />
+  <title>Hamza Atif — Web Studio | Premium Websites That Convert</title>
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="enhancements.css" />
   <link rel="stylesheet" href="polish.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23f59e0b'/><text x='50' y='65' font-family='Playfair Display' font-size='50' text-anchor='middle' fill='%230a0a0a' font-weight='700'>HA</text></svg>" />
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="nav wrap">
-    <a class="brand" href="#top" aria-label="Hamza Atif Web Studio home"><span>HA</span> WEB STUDIO</a>
-    <nav>
-      <a href="#why">Why a website?</a><a href="#services">Services</a><a href="#pricing">Investment</a>
-    </nav>
-    <button class="nav-cta open-brief">Start a project <b>↗</b></button>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">HA</div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#top" class="logo" aria-label="Hamza Atif Web Studio">HA · STUDIO</a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#why">Why Websites</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#included">Included</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Investment</a></li>
+        </ul>
+      </nav>
+      
+      <button class="btn btn-primary open-brief">Start a Project</button>
+    </div>
   </header>
 
   <main id="top">
-    <section class="hero wrap">
-      <div class="eyebrow"><i></i> Websites with a pulse</div>
-      <h1>Make your<br><em>first impression</em><br>unforgettable.</h1>
-      <p class="hero-copy">Your business deserves more than a template. We create bold, high-converting digital homes that turn curious visitors into your next best clients.</p>
-      <div class="hero-actions"><button class="button primary open-brief">Yes, I need a website <span>→</span></button><a class="text-link" href="#why">See what changes <span>↓</span></a></div>
-      <div class="hero-foot"><span>SCROLL TO EXPLORE</span><div></div><span>EST. 2025 · PAKISTAN</span></div>
-      <div class="orbit orbit-one">Strategy · Design · Build ·</div><div class="orbit orbit-two">Crafted for attention</div>
-    </section>
-
-    <section class="statement"><div class="wrap statement-grid"><p class="section-kicker">01 / THE DIFFERENCE</p><div><h2>Beautiful is the<br><em>baseline.</em></h2><p>We combine sharp strategy, magnetic design and purposeful development. The result: a website that feels unmistakably yours — and works as hard as you do.</p></div></div></section>
-
-    <section id="why" class="why wrap">
-      <div class="section-head"><div><p class="section-kicker">02 / WHY A WEBSITE?</p><h2>Your business is<br><em>being searched.</em></h2></div><p>A great website gives the people looking for you a clear reason to choose you.</p></div>
-      <div class="reason-grid">
-        <article><span>01</span><div class="reason-icon">◎</div><h3>Look credible instantly</h3><p>People decide in seconds. A polished website shows your business is established, serious and ready for them.</p></article>
-        <article><span>02</span><div class="reason-icon">↗</div><h3>Turn visits into leads</h3><p>Make it effortless for the right people to understand your offer, trust you and contact you on WhatsApp.</p></article>
-        <article><span>03</span><div class="reason-icon">◷</div><h3>Work while you sleep</h3><p>Your website explains, sells and collects inquiries 24/7 — even when you are busy doing the work you love.</p></article>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="section-label">Websites With A Pulse</span>
+        
+        <h1 class="hero-title">
+          Make Your<br>
+          <em>First Impression</em><br>
+          Unforgettable
+        </h1>
+        
+        <p class="hero-subtitle">
+          Your business deserves more than a template. We create bold, high-converting digital homes that turn curious visitors into your next best clients.
+        </p>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary open-brief">
+            Yes, I Need A Website
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <a href="#why" class="btn btn-outline">
+            See What Changes
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 3V13M8 13L3 8M8 13L13 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section id="services" class="services"><div class="wrap"><div class="section-head"><div><p class="section-kicker">03 / WHAT WE CREATE</p><h2>Everything your<br><em>brand needs online.</em></h2></div><p>Built around your business, your goals and the people you want to reach.</p></div><div class="service-list">
-      <article><span>01</span><h3>Landing Pages</h3><p>Focused, persuasive pages built to launch an offer, campaign or service — and get action.</p><b>From PKR 50K</b></article>
-      <article><span>02</span><h3>Business Websites</h3><p>A complete online home for your brand, services, story and inquiries — designed to earn trust.</p><b>Custom quote</b></article>
-      <article><span>03</span><h3>E-commerce Stores</h3><p>A seamless shop experience that makes browsing enjoyable and buying simple.</p><b>Custom quote</b></article>
-      <article><span>04</span><h3>Portfolio Websites</h3><p>Showcase your work with the visual clarity and confidence it deserves.</p><b>Custom quote</b></article>
-    </div></div></section>
+    <!-- WHY SECTION -->
+    <section id="why" class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap: 60px; margin-bottom: 60px;">
+          <div>
+            <span class="section-label">01 / The Difference</span>
+            <h2 class="section-title">Beautiful Is The<br><em>Baseline.</em></h2>
+          </div>
+          <div style="display: flex; align-items: flex-end;">
+            <p style="max-width: 420px; color: var(--text-secondary); font-size: 18px; line-height: 1.8;">
+              We combine sharp strategy, magnetic design and purposeful development. The result: a website that feels unmistakably yours — and works as hard as you do.
+            </p>
+          </div>
+        </div>
 
-    <section class="included wrap"><p class="section-kicker">A WEBSITE THAT DOES MORE</p><h2>Not just a pretty face.<br><em>Built for results.</em></h2><div class="included-grid"><span>Mobile-first design</span><span>WhatsApp integration</span><span>Fast-loading pages</span><span>SEO-ready foundation</span><span>Clear calls to action</span><span>Custom visual direction</span></div></section>
+        <div class="grid grid-3" style="margin-top: 80px;">
+          <div class="service-card card-hover">
+            <span class="service-number">01</span>
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Look Credible Instantly</h3>
+            <p>People decide in seconds. A polished website shows your business is established, serious and ready for them.</p>
+          </div>
+          
+          <div class="service-card card-hover">
+            <span class="service-number">02</span>
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M8 24L40 24M40 24L30 14M40 24L30 34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Turn Visits Into Leads</h3>
+            <p>Make it effortless for the right people to understand your offer, trust you and contact you on WhatsApp.</p>
+          </div>
+          
+          <div class="service-card card-hover">
+            <span class="service-number">03</span>
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 12V24L32 32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Work While You Sleep</h3>
+            <p>Your website explains, sells and collects inquiries 24/7 — even when you are busy doing the work you love.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="process" class="process"><div class="wrap"><p class="section-kicker">04 / HOW WE WORK</p><h2>From spark to<br><em>spotlight.</em></h2><div class="steps"><article><span>01</span><h3>Discover</h3><p>We dig into your goals, audience, offer and the thing that makes you different.</p></article><article><span>02</span><h3>Design</h3><p>We turn strategy into a visual experience people will want to stay inside.</p></article><article><span>03</span><h3>Deliver</h3><p>We build, refine and launch a site that is fast, flawless and ready to grow.</p></article></div></div></section>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="grid grid-2" style="gap: 60px; margin-bottom: 80px;">
+          <div>
+            <span class="section-label">02 / What We Create</span>
+            <h2 class="section-title">Everything Your<br><em>Brand Needs Online</em></h2>
+          </div>
+          <div style="display: flex; align-items: flex-end;">
+            <p style="max-width: 400px; color: var(--text-secondary); font-size: 18px; line-height: 1.8;">
+              Built around your business, your goals and the people you want to reach.
+            </p>
+          </div>
+        </div>
 
-    <section id="pricing" class="pricing wrap"><div><p class="section-kicker">05 / INVESTMENT</p><h2>Big impact,<br><em>made approachable.</em></h2></div><div class="price-card"><span class="pill">LANDING PAGES START FROM</span><strong>PKR 50K</strong><p>Every project is scoped around what you actually need. Whether you're starting small or building something bigger, pricing stays flexible and transparent.</p><button class="button dark open-brief">Get your custom quote <span>→</span></button></div></section>
+        <div class="grid grid-2" style="gap: 24px;">
+          <div class="service-card card-hover">
+            <span class="service-number">01</span>
+            <h3>Landing Pages</h3>
+            <p>Focused, persuasive pages built to launch an offer, campaign or service — and get action.</p>
+            <div style="margin-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">From PKR 50K</span>
+              <button class="btn btn-outline open-brief">Get Started</button>
+            </div>
+          </div>
+          
+          <div class="service-card card-hover">
+            <span class="service-number">02</span>
+            <h3>Business Websites</h3>
+            <p>A complete online home for your brand, services, story and inquiries — designed to earn trust.</p>
+            <div style="margin-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">Custom Quote</span>
+              <button class="btn btn-outline open-brief">Get Started</button>
+            </div>
+          </div>
+          
+          <div class="service-card card-hover">
+            <span class="service-number">03</span>
+            <h3>E-commerce Stores</h3>
+            <p>A seamless shop experience that makes browsing enjoyable and buying simple.</p>
+            <div style="margin-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">Custom Quote</span>
+              <button class="btn btn-outline open-brief">Get Started</button>
+            </div>
+          </div>
+          
+          <div class="service-card card-hover">
+            <span class="service-number">04</span>
+            <h3>Portfolio Websites</h3>
+            <p>Showcase your work with the visual clarity and confidence it deserves.</p>
+            <div style="margin-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-mono); font-size: 14px; color: var(--text-secondary);">Custom Quote</span>
+              <button class="btn btn-outline open-brief">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="closing"><div class="wrap"><p class="section-kicker">YOUR NEXT CHAPTER STARTS HERE</p><h2>Ready to make<br>something <em>remarkable?</em></h2><button class="button primary light open-brief">Let’s build your website <span>→</span></button></div></section>
+    <!-- INCLUDED SECTION -->
+    <section id="included" class="section">
+      <div class="container" style="text-align: center;">
+        <span class="section-label">A Website That Does More</span>
+        <h2 class="section-title">Not Just A Pretty Face.<br><em>Built For Results.</em></h2>
+        
+        <div class="included-grid">
+          <div class="included-item">Mobile-first design</div>
+          <div class="included-item">WhatsApp integration</div>
+          <div class="included-item">Fast-loading pages</div>
+          <div class="included-item">SEO-ready foundation</div>
+          <div class="included-item">Clear calls to action</div>
+          <div class="included-item">Custom visual direction</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="section">
+      <div class="container">
+        <div class="process-section">
+          <div class="grid grid-2" style="gap: 60px; margin-bottom: 60px;">
+            <div>
+              <span class="section-label">03 / How We Work</span>
+              <h2 class="section-title">From Spark To<br><em>Spotlight</em></h2>
+            </div>
+          </div>
+
+          <div class="process-steps">
+            <div class="process-step">
+              <h3>Discover</h3>
+              <p>We dig into your goals, audience, offer and the thing that makes you different.</p>
+            </div>
+            
+            <div class="process-step">
+              <h3>Design</h3>
+              <p>We turn strategy into a visual experience people will want to stay inside.</p>
+            </div>
+            
+            <div class="process-step">
+              <h3>Deliver</h3>
+              <p>We build, refine and launch a site that is fast, flawless and ready to grow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="section pricing-section">
+      <div class="container">
+        <span class="section-label">04 / Investment</span>
+        <h2 class="section-title">Big Impact,<br><em>Made Approachable</em></h2>
+        
+        <div class="pricing-card border-glow">
+          <span class="section-label" style="color: var(--text-secondary);">Landing Pages Start From</span>
+          
+          <div class="pricing-amount">PKR 50K</div>
+          
+          <p style="max-width: 400px; margin: 0 auto 40px; color: var(--text-secondary); font-size: 16px; line-height: 1.7;">
+            Every project is scoped around what you actually need. Whether you're starting small or building something bigger, pricing stays flexible and transparent.
+          </p>
+          
+          <button class="btn btn-primary open-brief">
+            Get Your Custom Quote
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="section" style="background: var(--accent-amber); color: var(--bg-primary); text-align: center; padding: 100px 0;">
+      <div class="container">
+        <span class="section-label" style="color: rgba(10,10,10,0.7);">Your Next Chapter Starts Here</span>
+        
+        <h2 class="section-title" style="color: var(--bg-primary);">
+          Ready To Make<br>
+          <em>Something Remarkable?</em>
+        </h2>
+        
+        <button class="btn btn-primary" style="background: var(--bg-primary); color: var(--accent-amber); font-size: 16px; padding: 20px 48px; margin-top: 40px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          Let's Build Your Website
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer wrap"><a class="brand" href="#top"><span>HA</span> WEB STUDIO</a><p>Made with intention, in Pakistan.</p><a href="https://www.instagram.com/hamzaatifwebstudio/" target="_blank" rel="noreferrer">Instagram ↗</a></footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#top" class="logo">HA · STUDIO</a>
+      
+      <ul class="footer-links">
+        <li><a href="#why">Why Websites</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Investment</a></li>
+      </ul>
+      
+      <div style="display: flex; gap: 24px; align-items: center;">
+        <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);">Made with intention, in Pakistan</span>
+        <a href="https://www.instagram.com/hamzaatifwebstudio/" target="_blank" rel="noreferrer" style="color: var(--text-secondary); font-size: 14px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-amber)'" onmouseout="this.style.color='var(--text-secondary)'">Instagram ↗</a>
+      </div>
+    </div>
+  </footer>
 
+  <!-- MODAL FORM -->
   <div class="modal" id="briefModal" aria-hidden="true">
-    <div class="modal-backdrop close-brief"></div>
-    <section class="brief" role="dialog" aria-modal="true" aria-labelledby="brief-title">
-      <button class="close close-brief" aria-label="Close">×</button>
-      <div class="brief-progress"><span id="stepLabel">01 / 13</span><div><i id="progressBar"></i></div></div>
+    <div class="modal-content">
+      <button class="close close-brief" aria-label="Close">
+        ×
+      </button>
+      
+      <span class="section-label" id="stepLabel">01 / 13</span>
+      
       <form id="briefForm">
-        <div class="question active"><span>01 / START HERE</span><h2 id="brief-title">What should we call you?</h2><input required name="name" autocomplete="name" placeholder="Your full name" /><button class="next button dark" type="button">Continue <span>→</span></button></div>
-        <div class="question"><span>02 / YOUR CONTACT</span><h2>Where can I reach you?</h2><input required name="contact" placeholder="WhatsApp number or email" /><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>03 / YOUR BUSINESS</span><h2>Tell me about your business.</h2><input required name="business" placeholder="Business or brand name" /><textarea required name="businessDescription" placeholder="What do you offer?" rows="2"></textarea><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>04 / WEBSITE TYPE</span><h2>What do you need built?</h2><div class="choices"><label><input type="radio" name="type" value="Landing page" required><span>Landing page</span></label><label><input type="radio" name="type" value="Business website"><span>Business website</span></label><label><input type="radio" name="type" value="E-commerce store"><span>E-commerce store</span></label><label><input type="radio" name="type" value="Portfolio / personal brand"><span>Portfolio / personal brand</span></label></div><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>05 / YOUR GOAL</span><h2>What must your website achieve?</h2><textarea required name="goal" placeholder="More leads, online sales, bookings, credibility, showcase work..." rows="3"></textarea><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>06 / YOUR AUDIENCE</span><h2>Who are we speaking to?</h2><textarea required name="audience" placeholder="Describe your ideal customer: location, age, needs or industry" rows="3"></textarea><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>07 / PAGES & CONTENT</span><h2>What pages do you need?</h2><textarea required name="pages" placeholder="For example: Home, About, Services, Shop, Portfolio, Contact, Blog..." rows="3"></textarea><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>08 / BRAND ASSETS</span><h2>Do you have a logo and brand style?</h2><div class="choices"><label><input type="radio" name="branding" value="I have a logo, colours and brand assets" required><span>Yes, I have everything</span></label><label><input type="radio" name="branding" value="I have a logo but need help with the visual style"><span>I have a logo only</span></label><label><input type="radio" name="branding" value="I need help with logo and visual identity"><span>I need branding help</span></label><label><input type="radio" name="branding" value="Not sure yet"><span>Not sure yet</span></label></div><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>09 / CONTENT & IMAGES</span><h2>Do you have your content ready?</h2><div class="choices"><label><input type="radio" name="content" value="Copy and professional photos are ready" required><span>Copy & photos ready</span></label><label><input type="radio" name="content" value="Photos are ready, copy needs support"><span>Photos ready, need copy</span></label><label><input type="radio" name="content" value="Need help with photos and copy"><span>Need help with both</span></label><label><input type="radio" name="content" value="Not sure yet"><span>Not sure yet</span></label></div><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>10 / DOMAIN & HOSTING</span><h2>Do you already have a domain?</h2><div class="choices"><label><input type="radio" name="domain" value="Yes — domain and hosting are ready" required><span>Domain & hosting ready</span></label><label><input type="radio" name="domain" value="I have a domain but need hosting"><span>I have a domain only</span></label><label><input type="radio" name="domain" value="No — I need help buying both"><span>I need help with both</span></label><label><input type="radio" name="domain" value="Not sure what this means"><span>Not sure yet</span></label></div><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>11 / SPECIAL FEATURES</span><h2>Anything your site needs to do?</h2><textarea required name="features" placeholder="Examples: WhatsApp chat, payments, booking calendar, product filters, forms, blog, member area..." rows="3"></textarea><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>12 / TIMELINE & BUDGET</span><h2>When do you want to launch?</h2><div class="choices"><label><input type="radio" name="timeline" value="As soon as possible" required><span>As soon as possible</span></label><label><input type="radio" name="timeline" value="Within 1 month"><span>Within 1 month</span></label><label><input type="radio" name="timeline" value="1–3 months"><span>1–3 months</span></label><label><input type="radio" name="timeline" value="Just exploring"><span>Just exploring</span></label></div><input required name="budget" placeholder="Your approximate budget (PKR)" /><div class="question-nav"><button class="back" type="button">← Back</button><button class="next button dark" type="button">Continue <span>→</span></button></div></div>
-        <div class="question"><span>13 / ONE LAST THING</span><h2>Anything else we should know?</h2><textarea name="extra" placeholder="Share links you like, competitors, ideas, questions or anything important…" rows="3"></textarea><p class="tiny">Your complete project brief will open in WhatsApp, ready for you to send.</p><div class="question-nav"><button class="back" type="button">← Back</button><button class="button primary" type="submit">Send my brief on WhatsApp <span>↗</span></button></div></div>
+        <!-- Step 1 -->
+        <div class="question active">
+          <h3>What should we call you?</h3>
+          <div class="form-group">
+            <input required name="name" autocomplete="name" placeholder="Your full name" />
+          </div>
+          <button class="btn btn-primary next" type="button" style="width: 100%;">Continue →</button>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="question">
+          <h3>Where can I reach you?</h3>
+          <div class="form-group">
+            <input required name="contact" placeholder="WhatsApp number or email" />
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="question">
+          <h3>Tell me about your business</h3>
+          <div class="form-group">
+            <input required name="business" placeholder="Business or brand name" />
+          </div>
+          <div class="form-group">
+            <textarea required name="businessDescription" placeholder="What do you offer?" rows="3"></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="question">
+          <h3>What do you need built?</h3>
+          <div class="form-group">
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="type" value="Landing page" required style="margin-right: 8px;">
+              Landing page
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="type" value="Business website">
+              Business website
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="type" value="E-commerce store">
+              E-commerce store
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+              <input type="radio" name="type" value="Portfolio / personal brand">
+              Portfolio / personal brand
+            </label>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="question">
+          <h3>What must your website achieve?</h3>
+          <div class="form-group">
+            <textarea required name="goal" placeholder="More leads, online sales, bookings, credibility, showcase work..." rows="3"></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 6 -->
+        <div class="question">
+          <h3>Who are we speaking to?</h3>
+          <div class="form-group">
+            <textarea required name="audience" placeholder="Describe your ideal customer: location, age, needs or industry" rows="3"></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 7 -->
+        <div class="question">
+          <h3>What pages do you need?</h3>
+          <div class="form-group">
+            <textarea required name="pages" placeholder="For example: Home, About, Services, Shop, Portfolio, Contact, Blog..." rows="3"></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 8 -->
+        <div class="question">
+          <h3>Do you have a logo and brand style?</h3>
+          <div class="form-group">
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="branding" value="I have a logo, colours and brand assets" required>
+              Yes, I have everything
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="branding" value="I have a logo but need help with the visual style">
+              I have a logo only
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="branding" value="I need help with logo and visual identity">
+              I need branding help
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+              <input type="radio" name="branding" value="Not sure yet">
+              Not sure yet
+            </label>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 9 -->
+        <div class="question">
+          <h3>Do you have your content ready?</h3>
+          <div class="form-group">
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="content" value="Copy and professional photos are ready" required>
+              Copy & photos ready
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="content" value="Photos are ready, copy needs support">
+              Photos ready, need copy
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="content" value="Need help with photos and copy">
+              Need help with both
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+              <input type="radio" name="content" value="Not sure yet">
+              Not sure yet
+            </label>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 10 -->
+        <div class="question">
+          <h3>Do you already have a domain?</h3>
+          <div class="form-group">
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="domain" value="Yes — domain and hosting are ready" required>
+              Domain & hosting ready
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="domain" value="I have a domain but need hosting">
+              I have a domain only
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="domain" value="No — I need help buying both">
+              I need help with both
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+              <input type="radio" name="domain" value="Not sure what this means">
+              Not sure yet
+            </label>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 11 -->
+        <div class="question">
+          <h3>Anything your site needs to do?</h3>
+          <div class="form-group">
+            <textarea required name="features" placeholder="Examples: WhatsApp chat, payments, booking calendar, product filters, forms, blog, member area..." rows="3"></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 12 -->
+        <div class="question">
+          <h3>When do you want to launch?</h3>
+          <div class="form-group">
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="timeline" value="As soon as possible" required>
+              As soon as possible
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="timeline" value="Within 1 month">
+              Within 1 month
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-bottom: 8px;">
+              <input type="radio" name="timeline" value="1–3 months">
+              1–3 months
+            </label>
+            <label style="display: block; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+              <input type="radio" name="timeline" value="Just exploring">
+              Just exploring
+            </label>
+          </div>
+          <div class="form-group">
+            <input required name="budget" placeholder="Your approximate budget (PKR)" />
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary next" type="button" style="flex: 2;">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 13 -->
+        <div class="question">
+          <h3>Anything else we should know?</h3>
+          <div class="form-group">
+            <textarea name="extra" placeholder="Share links you like, competitors, ideas, questions or anything important…" rows="3"></textarea>
+          </div>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 24px;">Your complete project brief will open in WhatsApp, ready for you to send.</p>
+          <div style="display: flex; justify-content: space-between; gap: 12px;">
+            <button class="btn btn-outline back" type="button" style="flex: 1;">← Back</button>
+            <button class="btn btn-primary" type="submit" style="flex: 2;">Send my brief on WhatsApp ↗</button>
+          </div>
+        </div>
+        
       </form>
-    </section>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
